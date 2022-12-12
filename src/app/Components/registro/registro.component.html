@@ -9,22 +9,22 @@
                 <p class="home__description">
                     
                 </p>
-                <form> 
+                <form [formGroup]="RegistroForm" (ngSubmit)="ejecutar()"> 
 
-                        <input type="text" name="Nombre" placeholder="Primer Nombre"  required>
+                        <input type="text" name="Nombre" placeholder="Primer Nombre"   formControlName="Nombre">
                         
-                        <input type="text" name="Nombre2" placeholder="Segundo Nombre">
+                        <input type="text" name="Nombre2" placeholder="Segundo Nombre"  formControlName="Nombre2">
 
-                        <input type="text" name="Apellido" placeholder="Primer Apellido"  required>
+                        <input type="text" name="Apellido" placeholder="Primer Apellido"  formControlName="Apellido">
                         
-                        <input type="text" name="Apellido2" placeholder="Segundo Apellido"  required>
+                        <input type="text" name="Apellido2" placeholder="Segundo Apellido"   formControlName="Apellido2">
 
-                        <input type="email" name="Email" placeholder="Correo" required>
+                        <input type="email" name="Email" placeholder="Correo"  formControlName="Email">
    
-                        <input type="password" name="password" placeholder="Contraseña" required>
+                        <input type="password" name="password" placeholder="Contraseña"  formControlName="password_2">
                         <br><br>
                         <label for="lang">Qué eres?</label>
-                        <select name="Rol" id="Rol">
+                        <select name="Rol" id="Rol" formControlName="Rol">
                                 <option value="Estudiante">Estudiante</option>
                                 <option value="Arrendatario">Arrendatario</option>
                              </select>
@@ -33,7 +33,6 @@
                         Acceder
                     </button>
 
-                   
                     
                 </form>
               </div>

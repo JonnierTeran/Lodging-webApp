@@ -10,11 +10,11 @@
                         
                     </p>
 
-                    <form> 
+                    <form [formGroup]="LoginForm" (ngSubmit)="ejecutar()"> 
 
-                            <input type="email" name="Email" placeholder="Correo" required>
+                            <input type="email" name="Email" placeholder="Correo" formControlName="user">
        
-                            <input type="password" name="password" placeholder="Contraseña" required>
+                            <input type="password" name="password" placeholder="Contraseña" formControlName="password">
                         
                       <button type="submit" class="button">
                             Acceder

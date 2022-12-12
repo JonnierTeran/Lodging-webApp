@@ -20,43 +20,38 @@
 <!--==================== HEADER ====================-->
 <header class="header" id="header">
     <nav class="nav container">
-        <a href="#" class="nav__logo2">
+        <a routerLink="Home" class="nav__logo2">
             LODGING <i class='bx bxs-home-alt-2'></i>
         </a>
 
         <div class="nav__menu">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a routerLink="Login" class="nav__link">
+                    <a (click)="Home()" class="nav__link" style="cursor: pointer;">
                         <i class='bx bx-home-alt-2'></i>
                         <span>Home</span>
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link active-link">
+                    <a routerLink="Home" class="nav__link active-link">
                         <i class='bx bx-building-house'></i>
                         <span>Alojamientos</span>
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link">
+                    <a routerLink="Home" class="nav__link">
                         <i class='bx bx-award'></i>
                         <span>Valores</span>
                     </a>
                 </li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link">
-                        <span>Contactos</span>
-                        <i class='bx bx-phone'></i>
-                    </a>
-                </li>
+                
             </ul>
         </div>
 
         <!-- Theme change button -->
         <i class='bx bx-moon change-theme' id="theme-button"></i>
-
-        <a routerLink="Login" class="nav__button button">Iniciar sesión</a>
+        <div *ngIf="Email"> HOLA,&nbsp;{{Email}}  </div>  
+        <a routerLink="Login" class="nav__button button" *ngIf="!Email">Iniciar sesión</a>
     </nav>
 </header>
 
@@ -65,7 +60,7 @@
 
 <div class="house-details">
     <div class="house-title">
-        <h1>Wenge House</h1>
+        <h1>Hogar Familiar</h1>
         <div class="row">
             <div>
                 <i class="fas fa-star"></i>
@@ -76,7 +71,8 @@
                 <span>245 Reviews</span>
             </div>
             <div>
-                <p>Location: San Francisco, California, United States</p>
+                <p>Location: Monteria, Cordoba, Colombia
+                </p>
             </div>
         </div>
     </div>
@@ -138,7 +134,7 @@
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21221.676224044128!2d-122.45917885570059!3d37.75203368896406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1641145357317!5m2!1sen!2sin"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        <b>San Francisco, California, United States</b>
+        <b>Monteria, Cordoba, Colombia</b>
         <p>It's like a home away from home.</p>
     </div>
 
@@ -158,7 +154,7 @@
                 min</p>
         </div>
     </div>
-    <a href="#" class="contact-host">Contact Host</a>
+    <a  class="contact-host">Contact Host</a>
 </div>
 
 <!--==================== FOOTER ====================-->
@@ -183,13 +179,13 @@
 
                 <ul class="footer__links">
                     <li>
-                        <a href="#" class="footer__link">Sobre nosotros</a>
+                        <a  class="footer__link">Sobre nosotros</a>
                     </li>
                     <li>
-                        <a href="#" class="footer__link">Características</a>
+                        <a  class="footer__link">Características</a>
                     </li>
                     <li>
-                        <a href="#" class="footer__link">Noticias y Blogs</a>
+                        <a  class="footer__link">Noticias y Blogs</a>
                     </li>
                 </ul>
             </div>
@@ -201,13 +197,13 @@
 
                 <ul class="footer__links">
                     <li>
-                        <a href="#" class="footer__link">¿Cómo trabajamos?</a>
+                        <a class="footer__link">¿Cómo trabajamos?</a>
                     </li>
                     <li>
-                        <a href="#" class="footer__link">Capital</a>
+                        <a  class="footer__link">Capital</a>
                     </li>
                     <li>
-                        <a href="#" class="footer__link">Seguridad</a>
+                        <a  class="footer__link">Seguridad</a>
                     </li>
                 </ul>
             </div>
@@ -219,13 +215,13 @@
 
                 <ul class="footer__links">
                     <li>
-                        <a href="#" class="footer__link">Preguntas frecuentes</a>
+                        <a class="footer__link">Preguntas frecuentes</a>
                     </li>
                     <li>
-                        <a href="#" class="footer__link">Centro de apoyo</a>
+                        <a  class="footer__link">Centro de apoyo</a>
                     </li>
                     <li>
-                        <a href="#" class="footer__link">Contacta con nosotros</a>
+                        <a  class="footer__link">Contacta con nosotros</a>
                     </li>
                 </ul>
             </div>
@@ -256,8 +252,8 @@
         </span>
 
         <div class="footer__privacy">
-            <a href="#">Términos y condiciones</a>
-            <a href="#">Política de privacidad</a>
+            <a >Términos y condiciones</a>
+            <a >Política de privacidad</a>
         </div>
     </div>
 </footer>
