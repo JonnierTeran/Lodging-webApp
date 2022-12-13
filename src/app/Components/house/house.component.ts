@@ -23,5 +23,8 @@ export class HouseComponent implements OnInit {
     this._Router.navigate(["Home"]);
     
   }
+  Redir(){
+    this._Router.navigate(["Alojamiento"])
+  }
 
 }

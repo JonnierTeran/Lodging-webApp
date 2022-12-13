@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/User';
 import { DataService } from 'src/app/Services/data.service';
 
@@ -14,7 +15,8 @@ export class RegistroComponent implements OnInit {
   Obj!:User[];
 
   constructor(private _formBuilder: FormBuilder,
-    private _DataService: DataService) { 
+    private _DataService: DataService,
+    private _Router: Router) { 
      this.Obj;
 
     this.RegistroForm = this._formBuilder.group({
@@ -42,8 +44,15 @@ export class RegistroComponent implements OnInit {
   
   this._DataService.SetUser(obj)
 
+  this.RegistroForm.reset()
   
   
+  
+  }
+
+  IniciarS(){
+    this._Router.navigate(["Login"])
+
   }
 
 }

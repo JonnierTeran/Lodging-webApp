@@ -1,36 +1,62 @@
-<div class="home section" id="home">
+<!--==================== SUBSCRIBE ====================-->
+<section class="subscribe section" *ngIf="Valid">
+    <div class="subscribe__container container">
+        <h1 class="subscribe__title">
+            Oferta tu habitación
+        </h1>
+        <p class="subscribe__description">
+            Ofrece tu pension en nuestro sitio
+        </p>
+        <a (click)="Confirm()" class="button subscribe__button">
+            Empezar
+        </a>
+        <br> <br>
+        <button (click)="Red()"class="button subscribe__button">
+            C A N C E L A R
+        </button>
+    </div>
+</section>
+
+
+
+
+<div class="home section" id="home"  *ngIf="!Valid">
     <div class="home__container container grid">
         <div class="home__data">
             <h1 class="home__title">
-                Información 
+                Información de habittacion 
             </h1>
             <p class="home__description">
                 
             </p>
-            <form action="" method="POST" class=""> 
+            <form [formGroup]="OfertaForm" (ngSubmit)="ejecutar()"> 
 
-                    <input type="text" name="Nombre_Habitacion" placeholder="Nombre de la Habitación"  required>
+                    <input type="text" name="Nombre_Habitacion" placeholder="Nombre de la Habitación"  formControlName="Nombre_Habitacion">
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <label for="lang">Estado</label>
-                    <select name="estadoHabi" id="estadoHabi">
+                    <select name="estadoHabi" id="estadoHabi" formControlName="EstadoHabi">
                             <option value="Ocupada">Ocupada</option>
                             <option value="Libre">Libre</option>
                          </select>
 
-                    <input type="text" name="Descripcion" placeholder="Descripcion">
+                    <input type="text" name="Descripcion" placeholder="Descripcion"  formControlName="Descripcion">
 
-                    <input type="number" name="Precio" placeholder="Precio"  required>
+                    <input type="number" name="Precio" placeholder="Precio"  formControlName="Precio" >
 
-                    <input type="text" name="Ciudad" placeholder="Ciudad"  required>
+                    <input type="text" name="Ciudad" placeholder="Ciudad"   formControlName="Ciudad">
 
-                    <input type="text" name="Departamento" placeholder="Departamento"  required>
+                    <input type="text" name="Departamento" placeholder="Departamento"   formControlName="Departamento">
 
-                    <input type="text" name="Direccion" placeholder="Direccion" required> 
+                    <input type="text" name="Direccion" placeholder="Direccion"  formControlName="Direccion"> 
                     <br><br>
-                    <input type="file" name="Imagen" placeholder="Fotos" >
+                    <input type="text" name="Imagen" placeholder="ingrese la URL De las Fotos"  formControlName="Imagen">
                  <br><br><br>
               <button type="submit" class="button">
-                    Agregar
+                    O F E R T A R   &nbsp; H A B I T A C I O N
+                </button>
+                <br> <br>
+                <button (click)="Red()" class="button">
+                    C A N C E L A R
                 </button>
 
                 
@@ -39,3 +65,4 @@
             <br><br>
         </div>
     </div>
+</div>

@@ -16,4 +16,12 @@ export class HomeComponent implements OnInit {
   Empezar(){
     this.Router.navigate(["Registrar"])
   }
+  Red(){
+    this.Router.navigate(["House"])
+  }
+
+  Redir(){
+    this.Router.navigate(["Alojamiento"])
+  }
+
 }
