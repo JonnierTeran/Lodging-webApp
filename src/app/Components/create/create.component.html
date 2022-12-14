@@ -6,32 +6,37 @@
         <hr> <br>
 
         <h4>Usuario Activo: {{Usuario}}</h4>
-        <h4>Email: {{Email}}</h4>
+        <h4>Email: {{users_Email}}</h4>
 
             <div class="swiper-wrapper">
                 <article class="popular__card swiper-slide">                          
                     <div class="popular__data">                               
-                             <img src="../../../assets/img/p20.jpg" alt="" class="popular__img"> 
+                        <h3>{{Habitacion.Nombre_Habitacion}}</h3> 
+                        <h4>{{Habitacion.Descripcion}}</h4> 
+                        <h6>Estado: {{Habitacion.EstadoHabi}}  </h6>
+                             <img src="{{Habitacion.Imagen}}" title="{{Habitacion.Nombre_Habitacion}}" class="popular__img" style="cursor: pointer;"> 
                             <h2 class="popular__price">
-                                    <span>$</span>Precio
+                                {{Habitacion.Precio | currency}}
                             </h2>
                             <h3 class="popular__title">
-                                   Ciudad, Departamento
+                                   {{Habitacion.Ciudad}}, {{Habitacion.Departamento}}
                             </h3>
                                 <p class="popular__description">
-                                    Direccion
+                                    Direccion: {{Habitacion.Direccion}}
                                 </p>
 
 
-                    <form>
+                    <form [formGroup]="ReservaForm" (ngSubmit)="ejecutar()">
                     <br>
                     <h4>Formulario de reservas</h4>
                     <br>
-                     <label for="date"> Fecha de ingreso: </label>
-                    <input type="date" value="date" name="date"> <br>
+                     <label for="date" > Fecha de ingreso: </label>
+                    <input type="date" value="date" name="date" formControlName="FechaInicio"> <br>
                     <br>
                     <label for="date"> Fecha de salida: </label>
-                   <input type="time" value=time name="time"> <br> <br>
+                   <input type="date" value=time name="time" formControlName="FechaFin"> <br> <br>
+                   <label for="time"> Hora de Facturacion:  </label>
+                   <input type="time" value=time name="time" formControlName="Hora"> <br> <br>
                    <label for="Dias">Dias a hospedar: </label>
                    <input type="number" name="Precio" id="" placeholder="dias a hospedar" #Dias (keyup)="Precio(+Dias.value)"> <br>
                    <br>

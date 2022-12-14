@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Factura } from '../models/Factura';
+import { Modelodepago } from '../models/Modelodepago';
+import { Reserva } from '../models/Reserva';
 import { User } from '../models/User';
 
 
@@ -46,7 +49,7 @@ public setHabitacion(Obj:User){
       
     }, Error =>{
       console.log(Error);
-      alert("Habitacion Registrada correctamente xd")
+      alert("Habitacion Registrada correctamente")
       
       
     }
@@ -60,6 +63,63 @@ public GetAlojamientos():Observable<any>{
 /******************************************************************************************* */
 
 public GetHabitacion(id:number):Observable<any>{
-  return this._http.get('http://localhost:3000/api/habitacion/idhabitacion' + id)
+  return this._http.get('http://localhost:3000/api/habitacion/' + id)
+}
+
+/******************************************************************************************* */
+public setReserva(Obj:Reserva){
+  this._http.post('http://localhost:3000/api/reserva', Obj) //https://room-serve.onrender.com/api/users
+  .subscribe(
+    Response => {
+      console.log(Response);
+      alert("Reserva Registrada correctamente")
+      
+    }, Error =>{
+      console.log(Error);
+      alert("Habitacion Reserva correctamente xd")
+      
+      
+    }
+  )
+}
+
+/******************************************************************************************* */
+public setFactura(Obj:Factura){
+  this._http.post('http://localhost:3000/api/factura', Obj) //https://room-serve.onrender.com/api/users
+  .subscribe(
+    Response => {
+      console.log(Response);
+      //alert("Factura Registrada correctamente")
+      
+    }, Error =>{
+      console.log(Error);
+      //alert("Habitacion Reserva correctamente xd")
+      
+      
+    }
+  )
+}
+
+/******************************************************************************************* */
+
+public GetFacturas():Observable<any>{
+  return this._http.get('http://localhost:3000/api/factura')
+}
+
+/******************************************************************************************* */
+public setModeloPago(Obj:Modelodepago){
+  this._http.post('http://localhost:3000/api/modelodepago', Obj) //https://room-serve.onrender.com/api/users
+  .subscribe(
+    Response => {
+      console.log(Response);
+      //alert("Factura Registrada correctamente")
+      
+    }, Error =>{
+      console.log(Error);
+      //alert("Habitacion Reserva correctamente xd")
+      
+      
+    }
+  )
 }
 }

@@ -6,6 +6,6 @@ export interface  Habitacion{
     Precio: number;
     Departamento: string;
     Ciudad: string;
-    Dirección: string;
+    Direccion: string;
     Imagen: string;
 }

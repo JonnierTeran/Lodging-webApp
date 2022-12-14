@@ -75,7 +75,7 @@
             <div class="house" *ngFor="let Elem of Habitaciones">
                 <div class="house-img" >
                     <br>
-                    <a><img src="{{Elem.Imagen}}" title="Casa Disponible" style="height: 320px; width: 340px; cursor: pointer;"></a>
+                    <a><img src="{{Elem.Imagen}}" title="{{Elem.Nombre_Habitacion}}" style="height: 320px; width: 340px; cursor: pointer;"></a>
                 </div> 
                 <div class="house-info" >
                     <p>Disponibilidad: {{Elem.EstadoHabi}}          </p>
