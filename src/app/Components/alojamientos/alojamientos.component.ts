@@ -40,4 +40,10 @@ export class AlojamientosComponent implements OnInit {
   Redire(){
     this._Router.navigate(["House"])
   }
+
+  Reservar(id:number){
+    this._Router.navigate(["create/" + id])
+  }
+
+ 
 }

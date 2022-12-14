@@ -34,6 +34,8 @@ public SetUser(Obj:User){
     }
   )
 }
+
+
 /******************************************************************************************* */
 public setHabitacion(Obj:User){
   this._http.post('http://localhost:3000/api/habitacion', Obj) //https://room-serve.onrender.com/api/users
@@ -57,4 +59,7 @@ public GetAlojamientos():Observable<any>{
 }
 /******************************************************************************************* */
 
+public GetHabitacion(id:number):Observable<any>{
+  return this._http.get('http://localhost:3000/api/habitacion/idhabitacion' + id)
+}
 }

@@ -16,7 +16,7 @@ const routes: Routes = [
   {path:"Registrar" , component:RegistroComponent},
   {path:"House" , component:HouseComponent},
   {path:"Alojamiento" , component:AlojamientosComponent},
-  {path:"create" , component: CreateComponent},
+  {path:"create/:id" , component: CreateComponent},
   {path:"Ofertar" , component:OfertarComponent}
 ];
 

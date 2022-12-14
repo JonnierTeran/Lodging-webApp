@@ -75,7 +75,7 @@
             <div class="house" *ngFor="let Elem of Habitaciones">
                 <div class="house-img" >
                     <br>
-                    <a><img src="{{Elem.Imagen}}" title="Casa Disponible" style="height: 290px; width: 290px; cursor: pointer;"></a>
+                    <a><img src="{{Elem.Imagen}}" title="Casa Disponible" style="height: 320px; width: 340px; cursor: pointer;"></a>
                 </div> 
                 <div class="house-info" >
                     <p>Disponibilidad: {{Elem.EstadoHabi}}          </p>
@@ -100,6 +100,11 @@
                        <br>
                        <button class="button contact__card-button">
                         <a href="tel: +573003964879">Llamar ahora</a>
+                    </button>
+
+                    <hr>
+                    <button  class="button contact__card-button" (click)="Reservar(Elem.IdHabitacion)">
+                        R E S E R V A R &nbsp; P E N S I Ò N
                     </button>
                       
                 </div>

@@ -1,12 +1,17 @@
     
 <section class="section" id="popular">        
     <div class="container">
-        <h1> Habitaciones </h1>
-        #each habitacion
+        <h1> R E S E R V A S</h1>
+        habitaciones de calidad
+        <hr> <br>
+
+        <h4>Usuario Activo: {{Usuario}}</h4>
+        <h4>Email: {{Email}}</h4>
+
             <div class="swiper-wrapper">
                 <article class="popular__card swiper-slide">                          
                     <div class="popular__data">                               
-                            {{!-- <img src="../../../assets/img/p20.jpg" alt="" class="popular__img"> --}}
+                             <img src="../../../assets/img/p20.jpg" alt="" class="popular__img"> 
                             <h2 class="popular__price">
                                     <span>$</span>Precio
                             </h2>
@@ -16,17 +21,32 @@
                                 <p class="popular__description">
                                     Direccion
                                 </p>
-                    <form action="/tasks/delete" method="POST" class="">
-                    <input type="hidden" value=IdHabitacion name="IdHabitacion">
+
+
+                    <form>
+                    <br>
+                    <h4>Formulario de reservas</h4>
+                    <br>
+                     <label for="date"> Fecha de ingreso: </label>
+                    <input type="date" value="date" name="date"> <br>
+                    <br>
+                    <label for="date"> Fecha de salida: </label>
+                   <input type="time" value=time name="time"> <br> <br>
+                   <label for="Dias">Dias a hospedar: </label>
+                   <input type="number" name="Precio" id="" placeholder="dias a hospedar" #Dias (keyup)="Precio(+Dias.value)"> <br>
+                   <br>
+                   <h5>Total a Cancelar: {{Prec | currency}}</h5>
+                   <br>
                     <button type="submit" class="button">
-                    <i class="bx bxs-x-square value__accordion-icon"></i></button>
+                    Reservar</button>
                     </form>
-                    <a href="/tasks/edit/" class="button">
-                    <i class="fas fa-pen"></i></a>             
+                    <br>
+                    <a  class="button"  (click)="Cancelar()">
+                        Cancelar 
+                    </a>             
                     </div>                           
                 </article>                     
             </div>                                
-        each 
      </div>                     
 </section>
           
