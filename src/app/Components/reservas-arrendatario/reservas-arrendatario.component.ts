@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Reserva } from '../models/Reserva';
-import { DataService } from '../Services/data.service';
+import { DataService } from 'src/app/Services/data.service';
+
+
 
 @Component({
   selector: 'app-reservas-arrendatario',
@@ -44,7 +45,7 @@ export class ReservasArrendatarioComponent implements OnInit {
     sessionStorage.clear()
   }
   Registrar(){
-    this._Router.navigate(["Alojamiento"])
+    this._Router.navigate(["Ofertar"])
   }
 
 }

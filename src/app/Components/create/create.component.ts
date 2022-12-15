@@ -5,6 +5,7 @@ import { Factura } from 'src/app/models/Factura';
 import { Habitacion } from 'src/app/models/Habitacion';
 import { Modelodepago } from 'src/app/models/Modelodepago';
 import { Reserva } from 'src/app/models/Reserva';
+import { updatehabitacion } from 'src/app/models/UpdateHab';
 import { DataService } from 'src/app/Services/data.service';
 
 @Component({
@@ -47,8 +48,9 @@ export class CreateComponent implements OnInit {
     let a = this._Route.snapshot.paramMap.get('id')
     let ide = +a!
     
+    this.users_Email =  sessionStorage.getItem('Email');
     this.id = a!;
-    console.log(typeof ide +" : "+ide);
+   // console.log(typeof ide +" : "+ide);
     
     
     this._DataService.GetHabitacion(ide)
@@ -60,8 +62,11 @@ export class CreateComponent implements OnInit {
       ,
       Err => console.log(Err))
 
-    this.Usuario = sessionStorage.getItem('nombre');
-    this.users_Email =  sessionStorage.getItem('Email');
+    
+              
+    
+   
+    
 
   }
 
@@ -94,7 +99,12 @@ export class CreateComponent implements OnInit {
          
        }, Err => console.log(Err))
       
+       
+
     }, 2000);
+
+    
+
 
     this.ReservaForm.reset()
     

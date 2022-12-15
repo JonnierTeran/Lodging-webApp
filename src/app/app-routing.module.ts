@@ -7,8 +7,8 @@ import { HouseComponent } from './Components/house/house.component';
 import { LoginComponent } from './Components/login/login.component';
 import { OfertarComponent } from './Components/ofertar/ofertar.component';
 import { RegistroComponent } from './Components/registro/registro.component';
-import { ReservasArrendatarioComponent } from './reservas-arrendatario/reservas-arrendatario.component';
-import { ReservasEstudiantesComponent } from './reservas-estudiantes/reservas-estudiantes.component';
+import { ReservasArrendatarioComponent } from './Components/reservas-arrendatario/reservas-arrendatario.component';
+import { ReservasEstudiantesComponent } from './Components/reservas-estudiantes/reservas-estudiantes.component';
 
 
 const routes: Routes = [

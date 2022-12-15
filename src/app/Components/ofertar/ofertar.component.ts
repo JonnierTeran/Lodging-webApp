@@ -12,11 +12,13 @@ import { DataService } from 'src/app/Services/data.service';
 export class OfertarComponent implements OnInit {
   OfertaForm: FormGroup;
   Valid:boolean;
-  
+  Email:string;
   constructor(private _Router:Router, private _DataService: DataService,
     private _formBuilder: FormBuilder,
     ) {
-  
+
+
+      this.Email =  sessionStorage.getItem('Email')!;
       this.Valid = true
   //Instancia del formulario
   this.OfertaForm = this._formBuilder.group({
@@ -28,7 +30,8 @@ export class OfertarComponent implements OnInit {
     Ciudad: ['', Validators.required],
     Departamento: ['', Validators.required],
     Direccion: ['', Validators.required],
-    Imagen: ['']
+    Imagen: [''],
+   correo_arrendatario:[this.Email]
   })
 
      }

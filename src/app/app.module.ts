@@ -16,8 +16,8 @@ import { DataService } from './Services/data.service'
 
 import { HttpClientModule } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
-import { ReservasArrendatarioComponent } from './reservas-arrendatario/reservas-arrendatario.component';
-import { ReservasEstudiantesComponent } from './reservas-estudiantes/reservas-estudiantes.component';
+import { ReservasArrendatarioComponent } from './Components/reservas-arrendatario/reservas-arrendatario.component';
+import { ReservasEstudiantesComponent } from './Components/reservas-estudiantes/reservas-estudiantes.component';
 
 @NgModule({
   declarations: [

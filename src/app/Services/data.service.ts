@@ -76,7 +76,7 @@ public setReserva(Obj:Reserva){
       
     }, Error =>{
       console.log(Error);
-      alert("Habitacion Reserva correctamente xd")
+      alert("Habitacion Reserva correctamente")
       
       
     }
@@ -130,5 +130,22 @@ public GetReservaArrendatario(Email:string):Observable<any>{
 /************************************************************************************** */
 public GetReservaArreEstudiante(Email:string):Observable<any>{
   return this._http.get<any>('http://localhost:3000/api/Reservae/' + Email)
+}
+
+/********************************************************************************************** */
+public setupdateEstado(Obj:any){
+  this._http.put('http://localhost:3000/api/updatehabitacion', Obj) //https://room-serve.onrender.com/api/users
+  .subscribe(
+    Response => {
+      console.log(Response);
+      
+      
+    }, Error =>{
+      console.log(Error);
+  
+      
+      
+    }
+  )
 }
 }
