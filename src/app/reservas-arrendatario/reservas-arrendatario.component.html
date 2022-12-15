@@ -1,0 +1,58 @@
+<section class="section" id="popular">        
+    <div class="container">
+        <a (click)="Registrar()" class="button subscribe__button" style="float: right;">
+            Regresar
+        </a> &nbsp;
+        <a (click)="Salir()" class="nav__button button" style="float: right;">Cerrar sesión</a>
+        <h1> R E S E R V A S</h1>
+        habitaciones de calidad 
+        <br>
+        <hr> <br>
+
+        <h4>Arrendatario(a):  {{Usuario}}</h4>
+        <h4>Email: {{Email}}</h4>
+
+            <div class="swiper-wrapper">
+                <article class="popular__card swiper-slide"> 
+                    <h3>Reservas Recibidas: </h3>                 <hr> <br>
+                    <div class="popular__data" *ngFor="let Elem of Reservas">                               
+                        <h3>Habitacion Reservada: {{Elem.Nombre_Habitacion}}</h3> 
+                        <h4>{{Elem.Descripcion}}</h4> 
+                        <h6>Estado Actual: {{Elem.EstadoHabi}}  </h6>
+                             <img src="{{Elem.Imagen}}" title="{{Elem.Nombre_Habitacion}}" class="popular__img" style="cursor: pointer;"> 
+                            <h2 class="popular__price">
+                               Precio:  {{Elem.Precio | currency}}  / 24h
+                            </h2>
+                            <h3 class="popular__title">
+                                   {{Elem.Ciudad +"-"+ Elem.Departamento}}
+                            </h3>
+                                <p class="popular__description">
+                                    Direccion: {{Elem.Direccion}}
+                                </p>
+
+
+                   
+                    <br>
+                    <hr>            
+                    </div>                           
+                </article>                     
+            </div>                                
+     </div>                     
+</section>
+
+
+
+<!--==================== SUBSCRIBE ====================-->
+<section class="subscribe section">
+    <div class="subscribe__container container">
+        <h1 class="subscribe__title">
+            Oferta tu habitación
+        </h1>
+        <p class="subscribe__description">
+            Ofrece tu pension en nuestro sitio
+        </p>
+        <a (click)="Registrar()" class="button subscribe__button">
+            Empezar
+        </a>
+    </div>
+</section>

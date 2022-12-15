@@ -1,0 +1,33 @@
+<section class="section" id="popular">        
+    <div class="container">
+        <a (click)="Registrar()" class="button subscribe__button" style="float: right;">
+            Regresar
+        </a> &nbsp;
+       
+        <h1> R E S E R V A S</h1>
+        habitaciones de calidad 
+        <br>
+        <hr> <br>
+
+        <h4>Estudiante(a):  {{Usuario}}</h4>
+        <h4>Email: {{Email}}</h4>
+
+            <div class="swiper-wrapper">
+                <article class="popular__card swiper-slide"> 
+                    <h3>Reservas Realizadas por: {{Usuario}} </h3>                 <hr> <br>
+                    <div class="popular__data" *ngFor="let Elem of Reservas">                               
+                        <h3>Habitacion Reservada: {{Elem.Nombre_Habitacion}}</h3> 
+                        <h4>{{Elem.Descripcion}}</h4> 
+                        <h6>Estado Actual: Disponible </h6>
+                        <h4>★☆★☆★ </h4>
+        
+
+                   
+                    <br>
+                    <hr>            
+                    </div>                           
+                </article>                     
+            </div>                                
+     </div>                     
+</section>
+

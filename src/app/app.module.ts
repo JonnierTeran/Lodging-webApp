@@ -16,6 +16,8 @@ import { DataService } from './Services/data.service'
 
 import { HttpClientModule } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
+import { ReservasArrendatarioComponent } from './reservas-arrendatario/reservas-arrendatario.component';
+import { ReservasEstudiantesComponent } from './reservas-estudiantes/reservas-estudiantes.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     OfertarComponent,
     HouseComponent,
     AlojamientosComponent,
-    InicioSesionComponent
+    InicioSesionComponent,
+    ReservasArrendatarioComponent,
+    ReservasEstudiantesComponent
   ],
   imports: [
     BrowserModule,

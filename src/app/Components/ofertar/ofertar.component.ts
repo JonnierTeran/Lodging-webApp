@@ -52,10 +52,14 @@ export class OfertarComponent implements OnInit {
     
     this.OfertaForm.reset();
 
-    this._Router.navigate(["Alojamiento"])
+    this._Router.navigate(["ReservasArrendatario"])
   }
 
   Confirm(){
     this.Valid = false;
+  }
+
+  Confirma(){
+    this._Router.navigate(["ReservasArrendatario"]);
   }
 }

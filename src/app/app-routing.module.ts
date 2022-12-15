@@ -7,6 +7,8 @@ import { HouseComponent } from './Components/house/house.component';
 import { LoginComponent } from './Components/login/login.component';
 import { OfertarComponent } from './Components/ofertar/ofertar.component';
 import { RegistroComponent } from './Components/registro/registro.component';
+import { ReservasArrendatarioComponent } from './reservas-arrendatario/reservas-arrendatario.component';
+import { ReservasEstudiantesComponent } from './reservas-estudiantes/reservas-estudiantes.component';
 
 
 const routes: Routes = [
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path:"House" , component:HouseComponent},
   {path:"Alojamiento" , component:AlojamientosComponent},
   {path:"create/:id" , component: CreateComponent},
-  {path:"Ofertar" , component:OfertarComponent}
+  {path:"Ofertar" , component:OfertarComponent},
+  {path:"ReservasArrendatario" , component:ReservasArrendatarioComponent},
+  {path:"ReservasEstudiantes" , component:ReservasEstudiantesComponent}
 ];
 
 @NgModule({

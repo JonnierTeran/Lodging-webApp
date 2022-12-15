@@ -99,7 +99,15 @@ export class CreateComponent implements OnInit {
     this.ReservaForm.reset()
     
     this.Prec = 0
+
+    this._router.navigate(["ReservasEstudiantes"])
     
 
   }
+
+  Salir(){
+    this._router.navigate(["Login"])
+    sessionStorage.clear()
+  }
+
 }

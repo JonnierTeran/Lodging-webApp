@@ -122,4 +122,13 @@ public setModeloPago(Obj:Modelodepago){
     }
   )
 }
+/************************************************************************************** */
+public GetReservaArrendatario(Email:string):Observable<any>{
+  return this._http.get<any>('http://localhost:3000/api/Reserva/' + Email)
+}
+
+/************************************************************************************** */
+public GetReservaArreEstudiante(Email:string):Observable<any>{
+  return this._http.get<any>('http://localhost:3000/api/Reservae/' + Email)
+}
 }

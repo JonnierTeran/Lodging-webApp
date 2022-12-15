@@ -45,5 +45,14 @@ export class AlojamientosComponent implements OnInit {
     this._Router.navigate(["create/" + id])
   }
 
- 
+  Salir(){
+    this._Router.navigate(["Login"])
+    sessionStorage.clear()
+  }
+
+  
+  Redirec(){
+    this._Router.navigate(["ReservasEstudiantes"])
+  }
+
 }

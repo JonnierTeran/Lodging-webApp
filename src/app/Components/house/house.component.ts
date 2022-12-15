@@ -27,4 +27,12 @@ export class HouseComponent implements OnInit {
     this._Router.navigate(["Alojamiento"])
   }
 
+  Salir(){
+    this._Router.navigate(["Login"])
+    sessionStorage.clear()
+  }
+  Redirec(){
+    this._Router.navigate(["ReservasEstudiantes"])
+  }
+
 }

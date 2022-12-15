@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
               sessionStorage.setItem('nombre', e[0].Nombre)
               sessionStorage.setItem('Email', e[0].Email)
               sessionStorage.setItem('Password', e[0].password_2)
-              this._Router.navigate(["House"]);
+              this._Router.navigate(["Alojamiento"]);
               alert('Rol: Estuidante')
               alert('Credenciales correctas, Bienvenido')
             }

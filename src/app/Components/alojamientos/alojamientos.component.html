@@ -45,27 +45,34 @@
                     </a>
                 </li>
                 
+                
             </ul>
         </div>
 
           <!-- Theme change button -->
           <i class='bx bx-moon change-theme' id="theme-button"></i>
-          <div *ngIf="Email"> HOLA,&nbsp;{{Email}}  </div>  
-          <a routerLink="Login" class="nav__button button" *ngIf="!Email">Iniciar sesión</a>
-    </nav>
-</header>
-
-<!--==================== HOME ====================-->
-
-<div class="home__container container grid">
-</div>
-<div class="container">
-
+          <div *ngIf="Email"> HOLA,&nbsp;{{Email}}  </div>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a (click)="Salir()" class="nav__button button">Cerrar sesión</a>
+        </nav>
+    </header>
+    
+    <!--==================== HOME ====================-->
+    
+    <div class="home__container container grid">
+    </div>
+    <div class="container">
+        
+        <div class="nav__item">
+            <a (click)="Redirec()"  class="nav__link" style="cursor: pointer; color: black; background-color: burlywood;">
+                <> Click Aqui para ver mis Reservas <>
+            </a>
+        </div> <br>
     <span class="section__subtitle">¡Reserva ahora!</span>
     <h2 class="section__title">
         Encuentre aquí las pensiones que se acoplen a su necesidad <span>.</span>
     </h2>
 
+    
     <div class="search-box">
         <i class="bx bx-search"></i>
         <input type="text" placeholder="Buscar una Pensión">
